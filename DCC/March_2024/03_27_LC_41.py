@@ -1,5 +1,8 @@
+from collections import UserList
+
+
 class Solution:
-    def firstMissingPositive(self, nums: List[int]) -> int:
+    def firstMissingPositive(self, nums: UserList[int]) -> int:
         containsOne = False
         n = len(nums)
         for i in range(n):
@@ -22,3 +25,14 @@ class Solution:
                 return i + 1
 
         return n + 1
+
+
+# Create an instance of the Solution class
+solution = Solution()
+
+# Define a list of numbers to test the method
+nums = [3, 2, -1, 1]
+
+# Call the firstMissingPositive method with the test list and print the result
+missing_positive = solution.firstMissingPositive(nums)
+print(f"The first missing positive integer is: {missing_positive}")
